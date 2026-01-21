@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Demo Website</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a class="brand" href="#">
+        <span class="brand__dot"></span>
+        <span class="brand__name">DemoSite</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <button class="icon-btn" id="themeBtn" aria-label="Toggle theme" title="Toggle theme">
+          🌙
+        </button>
+        <button class="btn btn--primary" id="openModalBtn">Get Started</button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__left">
+          <p class="chip">✨ Simple • Fast • Modern</p>
+          <h1>Build a clean demo website in minutes.</h1>
+          <p class="muted">
+            This template includes a responsive navbar, feature cards, pricing section,
+            contact form, modal, toast notifications, and dark mode.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="#features">Explore Features</a>
+            <button class="btn btn--ghost" id="toastBtn">Show Toast</button>
+          </div>
+
+          <div class="stats">
+            <div class="stat">
+              <div class="stat__num" id="statUsers">1,240</div>
+              <div class="stat__label">Users</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num" id="statSpeed">0.9s</div>
+              <div class="stat__label">Load Time</div>
+            </div>
+            <div class="stat">
+              <div class="stat__num" id="statUptime">99.9%</div>
+              <div class="stat__label">Uptime</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="glass card">
+            <div class="card__header">
+              <div>
+                <h3>Dashboard Preview</h3>
+                <p class="muted small">Fake data • demo UI</p>
+              </div>
+              <span class="badge">Live</span>
+            </div>
+
+            <div class="mini-grid">
+              <div class="mini">
+                <p class="mini__label">Revenue</p>
+                <p class="mini__value" id="rev">$12,840</p>
+                <p class="mini__delta up" id="revDelta">+8.2%</p>
+              </div>
+              <div class="mini">
+                <p class="mini__label">Orders</p>
+                <p class="mini__value" id="orders">1,392</p>
+                <p class="mini__delta up" id="ordersDelta">+3.1%</p>
+              </div>
+              <div class="mini">
+                <p class="mini__label">Support</p>
+                <p class="mini__value" id="tickets">24</p>
+                <p class="mini__delta down" id="ticketsDelta">-2.0%</p>
+              </div>
+              <div class="mini">
+                <p class="mini__label">Visitors</p>
+                <p class="mini__value" id="visitors">28.4k</p>
+                <p class="mini__delta up" id="visitorsDelta">+11.4%</p>
+              </div>
+            </div>
+
+            <div class="progress">
+              <div class="progress__row">
+                <span>Weekly goal</span>
+                <span id="goalPct">72%</span>
+              </div>
+              <div class="progress__bar">
+                <div class="progress__fill" id="goalFill" style="width:72%"></div>
+              </div>
+              <p class="muted small">Tip: Click “Get Started” to open the modal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- Features -->
+    <section class="section" id="features">
+      <div class="container">
+        <div class="section__head">
+          <h2>Features</h2>
+          <p class="muted">A small but polished demo UI kit.</p>
+        </div>
+
+        <div class="grid">
+          <article class="feature card">
+            <div class="feature__icon">⚡</div>
+            <h3>Fast UI</h3>
+            <p class="muted">Lightweight layout with clean spacing and good typography.</p>
+          </article>
+          <article class="feature card">
+            <div class="feature__icon">🧩</div>
+            <h3>Components</h3>
+            <p class="muted">Cards, badges, modal, toast, and form validations.</p>
+          </article>
+          <article class="feature card">
+            <div class="feature__icon">🌙</div>
+            <h3>Dark Mode</h3>
+            <p class="muted">One-click theme toggle with saved preference.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="section" id="pricing">
+      <div class="container">
+        <div class="section__head">
+          <h2>Pricing</h2>
+          <p class="muted">Example pricing cards for your demo.</p>
+        </div>
+
+        <div class="pricing">
+          <div class="price card">
+            <h3>Starter</h3>
+            <p class="muted">For personal demos</p>
+            <div class="price__tag"><span>$</span>0</div>
+            <ul>
+              <li>Basic sections</li>
+              <li>Responsive layout</li>
+              <li>Simple JS</li>
+            </ul>
+            <button class="btn btn--ghost selectPlan" data-plan="Starter">Choose</button>
+          </div>
+
+          <div class="price card price--best">
+            <div class="badge best">Popular</div>
+            <h3>Pro</h3>
+            <p class="muted">For production-like demo</p>
+            <div class="price__tag"><span>$</span>9</div>
+            <ul>
+              <li>Modal + toast</li>
+              <li>Dark mode</li>
+              <li>Form validation</li>
+            </ul>
+            <button class="btn btn--primary selectPlan" data-plan="Pro">Choose</button>
+          </div>
+
+          <div class="price card">
+            <h3>Team</h3>
+            <p class="muted">For showcase</p>
+            <div class="price__tag"><span>$</span>19</div>
+            <ul>
+              <li>More sections</li>
+              <li>More components</li>
+              <li>Easy customization</li>
+            </ul>
+            <button class="btn btn--ghost selectPlan" data-plan="Team">Choose</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section__head">
+          <h2>Contact</h2>
+          <p class="muted">A simple validated form (demo).</p>
+        </div>
+
+        <div class="contact card">
+          <form id="contactForm" novalidate>
+            <div class="row">
+              <label>
+                Name
+                <input type="text" id="name" placeholder="Your name" required minlength="2" />
+              </label>
+              <label>
+                Email
+                <input type="email" id="email" placeholder="you@example.com" required />
+              </label>
+            </div>
+
+            <label>
+              Message
+              <textarea id="message" placeholder="Write something..." required minlength="10"></textarea>
+            </label>
+
+            <div class="form-actions">
+              <button class="btn btn--primary" type="submit">Send Message</button>
+              <p class="muted small" id="formHint">We will just show a toast (no real sending).</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="muted small">© <span id="year"></span> DemoSite. Built with HTML/CSS/JS.</p>
+        <a class="muted small" href="#top">Back to top ↑</a>
+      </div>
+    </footer>
+  </main>
+<!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__overlay" id="modalOverlay"></div>
+    <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal__head">
+        <h3 id="modalTitle">Get Started</h3>
+        <button class="icon-btn" id="closeModalBtn" aria-label="Close modal">✕</button>
+      </div>
+
+      <p class="muted">
+        This is a demo modal. Choose a plan and we’ll show a toast.
+      </p>
+
+      <div class="modal__actions">
+        <button class="btn btn--ghost selectPlan" data-plan="Starter">Starter</button>
+        <button class="btn btn--primary selectPlan" data-plan="Pro">Pro</button>
+        <button class="btn btn--ghost selectPlan" data-plan="Team">Team</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" aria-live="polite" aria-atomic="true">
+    <div class="toast__dot"></div>
+    <div class="toast__text" id="toastText">Hello!</div>
+    <button class="toast__close" id="toastClose" aria-label="Close toast">✕</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
